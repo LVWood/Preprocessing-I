@@ -152,36 +152,39 @@ img {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  background: orange;
   margin: 10px 5rem;
 }
 .header-nav h1 {
   font-family: 'Playfair Display', serif;
   font-size: 6rem;
-  padding: 6rem 0;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .header-nav h1 {
+    font-size: 3rem;
+  }
 }
 .header-nav nav {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
-  background: yellowgreen;
 }
 .header-nav a {
   border: 1px solid lightgray;
   padding: 0.75rem;
   text-decoration: none;
-  margin: 10px 5rem;
+  margin: 5px 0;
 }
 .header-nav a:hover {
   background: lightgray;
   color: white;
 }
-@media (800px) {
+@media (max-width: 500px) {
   .header-nav a {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    background: pink;
+    font-size: 1em;
   }
 }
 .main-content {
@@ -189,36 +192,69 @@ img {
   display: flex;
   flex-wrap: wrap;
 }
-.main-content .content-section {
+.content-section {
   width: 100%;
-  background: yellow;
   padding: 10px 0;
-  margin: 10px 5rem;
+  margin: 20px 5rem 0 5rem;
   border-bottom: 1px solid black;
 }
-.main-content h2 {
+.content-section h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-variant-caps: all-small-caps;
   padding: 10px 0;
 }
-.main-content h3 {
+@media (max-width: 500px) {
+  .content-section {
+    font-size: 2.5em;
+  }
+}
+.content-section h3 {
   font-family: 'Playfair Display', serif;
   font-size: 2rem;
   padding: 10px 0;
 }
-.main-content p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.5rem;
+.content-section p {
   line-height: 2rem;
   padding: 0 5rem;
+  margin: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
 }
-.main-content .project-boxes {
+@media (max-width: 500px) {
+  .content-section p {
+    font-size: 1em;
+  }
+}
+.content-section li {
+  padding-bottom: 20px;
+}
+.content-section ul {
+  margin: 10px 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+.content-section .project-boxes {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.main-content .project-boxes img {
+@media (max-width: 500px) {
+  .content-section .project-boxes {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+.content-section .project-boxes img {
   padding: 5px;
   border: 0.5px solid black;
+}
+.contact button {
+  margin: 10px 5rem;
+}
+footer {
+  margin: 10px 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
 }

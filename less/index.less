@@ -67,6 +67,22 @@ img {
 @p-font: 'Montserrat', sans-serif;
 @h-font: 'Playfair Display', serif;
 
+
+//MIXINS
+.paragraph-style() {
+	font-family: @p-font;
+	font-size: 1.5rem;
+}
+
+.button-style() {
+	border: 1px solid lightgray;
+	padding: .75rem;
+	text-decoration: none;
+	margin: 5px 0;
+}
+
+
+
 .container {
 	max-width: 1100 px;
 	width: 100%;
@@ -82,34 +98,34 @@ img {
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
-		background: orange;
+		// background: orange;
 		margin: @paragraph-margin;
 	}
 	h1 {
 		font-family: @h-font;
 		font-size: 6rem;
-		padding: 6rem 0;
+		padding: 10px 0;
+		margin: 20px 0;
+		@media (max-width: 500px) {
+			font-size: 3rem;
+		}
 	}
 	nav {
-		font-family: @p-font;
-		font-size: 1.5rem;
-		background: yellowgreen;
-		}		
+		.paragraph-style();
+		// background: yellowgreen;
+		}	
+		
 		a {
-			border: 1px solid lightgray;
-			padding: .75rem;
-			text-decoration: none;
-			margin: @paragraph-margin;
+			.button-style;
 			&:hover {
-			background: lightgray;
-			color: white;
+				background: lightgray;
+				color: white;
 			}
-			@media(800px) {
+			@media(max-width: 500px) {
 				display: flex;
-				flex-wrap: wrap;
 				flex-direction: column;
 				align-items: center;
-				background: pink; // not working
+				font-size: 1em;
 			}
 		}
 }
@@ -121,18 +137,21 @@ img {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+}
 	.content-section {
 		width: 100%;
-		background: yellow;
+		// background: yellow;
 		padding: 10px 0;
-		margin: @paragraph-margin;
+		margin: 20px 5rem 0 5rem;
 		border-bottom: 1px solid black;
-		}
 	h2 {
 		font-family: @h-font;
-		font-size: 4rem;
+		font-size: 4.5rem;
 		font-variant-caps: all-small-caps;
 		padding: 10px 0;
+		}
+		@media(max-width: 500px) {
+			font-size: 2.5em;
 		}
 	h3 {
 		font-family: @h-font;
@@ -140,19 +159,47 @@ img {
 		padding: 10px 0;
 		}
 	p {
-		font-family: @p-font;
-		font-size: 1.5rem;
 		line-height: 2rem;
 		padding: 0 5rem;
+		margin: 20px 0;
+		.paragraph-style();
+		@media(max-width: 500px) {
+			font-size: 1em;
+		}
+	}
+	li {
+		padding-bottom: 20px;
+	}
+	ul {
+		margin: @paragraph-margin;
+		.paragraph-style();
+		@media(max-width: 500px) {
+			font-size: 1em;
+
 	}
 	.project-boxes {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		@media(max-width: 500px) {
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: center;
+		}
 		img {
 			padding: 5px;
 			border: .5px solid black;
 		}
-	
 	}
 	}
+
+	//CONTACT AND FOOTER
+.contact button {
+	margin: @paragraph-margin;
+}
+
+footer {
+	margin: @paragraph-margin;
+	.paragraph-style();
+
+}
