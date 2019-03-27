@@ -54,6 +54,105 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+//VARIABLES 
+@paragraph-margin: 10px 5rem;
+@p-font: 'Montserrat', sans-serif;
+@h-font: 'Playfair Display', serif;
+
+.container {
+	max-width: 1100 px;
+	width: 100%;
+	// background: turquoise;
+}
+
+//HEADER NAV STUFF
+.header-nav {
+	width: 100%;
+	header {
+		width: 90%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+		background: orange;
+		margin: @paragraph-margin;
+	}
+	h1 {
+		font-family: @h-font;
+		font-size: 6rem;
+		padding: 6rem 0;
+	}
+	nav {
+		font-family: @p-font;
+		font-size: 1.5rem;
+		background: yellowgreen;
+		}		
+		a {
+			border: 1px solid lightgray;
+			padding: .75rem;
+			text-decoration: none;
+			margin: @paragraph-margin;
+			&:hover {
+			background: lightgray;
+			color: white;
+			}
+			@media(800px) {
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				align-items: center;
+				background: pink; // not working
+			}
+		}
+}
+
+
+
+//MAIN CONTENT
+.main-content {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	.content-section {
+		width: 100%;
+		background: yellow;
+		padding: 10px 0;
+		margin: @paragraph-margin;
+		border-bottom: 1px solid black;
+		}
+	h2 {
+		font-family: @h-font;
+		font-size: 4rem;
+		font-variant-caps: all-small-caps;
+		padding: 10px 0;
+		}
+	h3 {
+		font-family: @h-font;
+		font-size: 2rem;
+		padding: 10px 0;
+		}
+	p {
+		font-family: @p-font;
+		font-size: 1.5rem;
+		line-height: 2rem;
+		padding: 0 5rem;
+	}
+	.project-boxes {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+		img {
+			padding: 5px;
+			border: .5px solid black;
+		}
+	
+	}
+	}
