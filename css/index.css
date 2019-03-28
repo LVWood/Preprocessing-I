@@ -1,1 +1,260 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 62.5%;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.container {
+  max-width: 1100 px;
+  width: 100%;
+}
+.header-nav {
+  width: 100%;
+}
+.header-nav header {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 10px 5rem;
+}
+.header-nav h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  padding: 10px 0;
+  margin: 20px 0;
+}
+@media (max-width: 500px) {
+  .header-nav h1 {
+    font-size: 3rem;
+  }
+}
+.header-nav nav {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+.header-nav a {
+  border: 1px solid lightgray;
+  padding: 0.75rem;
+  text-decoration: none;
+  margin: 5px 0;
+}
+.header-nav a:hover {
+  background: lightgray;
+  color: white;
+}
+@media (max-width: 500px) {
+  .header-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+  }
+}
+.main-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.content-section {
+  width: 100%;
+  padding: 10px 0;
+  margin: 20px 5rem 0 5rem;
+  border-bottom: 1px solid black;
+}
+.content-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.5rem;
+  font-variant-caps: all-small-caps;
+  padding: 10px 0;
+}
+@media (max-width: 500px) {
+  .content-section {
+    font-size: 2.5em;
+  }
+}
+.content-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  padding: 10px 0;
+}
+.content-section p {
+  line-height: 2rem;
+  padding: 0 5rem;
+  margin: 20px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+@media (max-width: 500px) {
+  .content-section p {
+    font-size: 1em;
+  }
+}
+.content-section li {
+  padding-bottom: 20px;
+}
+.content-section ul {
+  margin: 10px 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+.content-section .project-boxes {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .content-section .project-boxes {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+}
+.content-section .project-boxes img {
+  padding: 5px;
+  border: 0.5px solid black;
+}
+.contact button {
+  margin: 10px 5rem;
+}
+footer {
+  margin: 10px 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
